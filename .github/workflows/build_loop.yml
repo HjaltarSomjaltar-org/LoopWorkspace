@@ -285,7 +285,8 @@ jobs:
           # Adding comments (#) may be useful to easily tell the individual patches apart.
           live_activity \
           profiles \
-          basal_lock 
+          basal_lock \
+          export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
           echo "Downloading code to support xdrip-client-swift"
           git clone https://github.com/johandegraeve/xdrip-client-swift-1.git xdrip-client-swift
           
